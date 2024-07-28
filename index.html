@@ -4,20 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- header-section -->
-    <div>
-      <h1>Notes</h1>
-      <button type="button" class="serch-button">
-        <img src="./images/icon.svg" alt="icon" width="17px" height="17px" />
-      </button>
+
+    <div class="wrapper">
+      <div class="container">
+        <header class="header container">
+          <div class="header-content container">
+            <h1 class="header-title">Notes</h1>
+            <div class="header-buttons">
+              <button type="button" class="search-button">
+                <img
+                  src="./images/header/icon.svg"
+                  alt="seach-icon"
+                  width="24px"
+                  height="24px"
+                />
+              </button>
+              <button type="button" class="info-button">
+                <img
+                  src="./images/header/info.svg"
+                  alt="info-icon"
+                  width="24px"
+                  height="24px"
+                />
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- main-section -->
+        <main class="main-content container">
+          <img
+            class="main-image"
+            src="./images/main/rafiki.svg"
+            alt="rafiki"
+            width="350px"
+            height="286"
+          />
+          <p class="main-sub-text">Create your first note !</p>
+        </main>
+
+        <!-- footer-section -->
+        <footer class="footer-content container">
+          <button type="button" class="footer-button">
+            <img
+              src="./images/footer/add.svg"
+              alt="footer-add"
+              width="28px"
+              height="28px"
+            />
+          </button>
+        </footer>
+      </div>
     </div>
-
-    <!-- main-section -->
-
-    <!-- footer-section -->
     <script type="module" src="./js/notes.js"></script>
   </body>
 </html>
