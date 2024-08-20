@@ -3,65 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notes</title>
+    <title>My Diary</title>
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- header-section -->
-
     <div class="wrapper">
-      <div class="container">
-        <header class="header container">
-          <div class="header-content container">
-            <h1 class="header-title">Notes</h1>
-            <div class="header-buttons">
-              <button type="button" class="search-button">
-                <img
-                  src="./images/header/icon.svg"
-                  alt="seach-icon"
-                  width="24px"
-                  height="24px"
-                />
-              </button>
-              <button type="button" class="info-button">
-                <img
-                  src="./images/header/info.svg"
-                  alt="info-icon"
-                  width="24px"
-                  height="24px"
-                />
-              </button>
+      <header class="header">
+        <div class="header-content">
+          <h1 class="header-title">notes</h1>
+          <div class="header-buttons">
+            <button type="button" class="search-button">
+              <img
+                src="./images/header/icon.svg"
+                alt="seach-icon"
+                width="24px"
+                height="24px"
+              />
+            </button>
+            <button type="button" class="info-button">
+              <img
+                src="./images/header/info.svg"
+                alt="info-icon"
+                width="24px"
+                height="24px"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- main-section -->
+      <main class="main-content">
+        <div class="empty_state" style="display: none">
+          <img
+            class="main-image"
+            src="./images/main/rafiki.svg"
+            alt="rafiki"
+            width="350px"
+            height="286"
+          />
+          <p class="main-sub-text">Create your first note !</p>
+        </div>
+
+        <ul id="diary_list" class="diary-list">
+          <li>
+            <div id="diary_item" class="diary-item">
+              <h3 id="diary_item_title" class="diary-item-title">Routine</h3>
+              <div class="date_and_category_wrapper">
+                <p id="diary_note_date" class="diary-note-date">20.08.2020</p>
+                <p id="diary_note_category" class="diary-note-category">
+                  Health
+                </p>
+              </div>
             </div>
-          </div>
-        </header>
+          </li>
+        </ul>
+      </main>
 
-        <!-- main-section -->
-        <main class="main-content container">
-          <div class="empty_state">
-            <img
-              class="main-image"
-              src="./images/main/rafiki.svg"
-              alt="rafiki"
-              width="350px"
-              height="286"
-            />
-            <p class="main-sub-text">Create your first note !</p>
-          </div>
-        </main>
-
-        <!-- footer-section -->
-        <footer class="footer-content container">
-          <button type="button" class="footer-button">
-            <img
-              src="./images/footer/add.svg"
-              alt="footer-add"
-              width="28px"
-              height="28px"
-            />
-          </button>
-        </footer>
-      </div>
+      <!-- footer-section -->
+      <footer class="footer-content">
+        <button type="button" class="footer-button">
+          <img
+            src="./images/footer/add.svg"
+            alt="footer-add"
+            width="28px"
+            height="28px"
+          />
+        </button>
+      </footer>
     </div>
     <script type="module" src="./js/notes.js"></script>
   </body>

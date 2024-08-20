@@ -5,11 +5,18 @@
   --red_clr: #ff0000;
   --green_clr: #30be71;
 }
+@font-face {
+  font-family: 'Nunino';
+  src: url('/fonts/Nunito-Light.ttf'), url('/fonts/Nunito-Regular.ttf'),
+    url('/fonts/Nunito-SemiBold.ttf');
+}
+
 * {
   /* використовується для всіх тегів */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunino';
 }
 
 html,
@@ -97,7 +104,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -141,11 +147,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@font-face {
-  font-family: 'Nunino';
-  src: url('/fonts/Nunito-Light.ttf'), url('/fonts/Nunito-Regular.ttf'),
-    url('/fonts/');
-}
 
 html,
 body {
@@ -163,45 +164,45 @@ body {
   min-height: 100vh;
   background-color: var(--main_clr);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-radius: 30px;
   position: relative;
-}
-
-.list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  width: 365px;
-  margin-left: 24px;
-  margin-right: 24px;
+  padding-inline: 24px;
+  position: relative;
 }
 
 .header {
   margin: 0;
   padding: 0;
+  position: fixed;
+  top: 47px;
+  left: 0;
+  width: 100%;
 }
+
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 47px 0 0 0;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 414px;
+  margin: auto;
+  padding-inline: 24px;
 }
+
 .header-title {
-  margin: 0 129px 0 0;
-  font-family: 'Nunito';
   font-size: 43px;
   line-height: calc(58 / 43);
   font-weight: 400;
   color: #ffffff;
+  text-transform: uppercase;
 }
+
 .header-buttons {
   display: flex;
 }
+
 .search-button {
   display: block;
   width: 50px;
@@ -212,6 +213,7 @@ body {
   border-radius: 15px;
   border: none;
 }
+
 .info-button {
   display: block;
   width: 50px;
@@ -222,13 +224,62 @@ body {
   border-radius: 15px;
   border: none;
 }
+
+/* main content  */
 .main-content {
-  padding: 0 auto;
-  margin: 0 auto;
+  width: 100%;
 }
+
+.wrapper .main-content .diary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.diary-item {
+  min-height: 150px;
+  width: 100%;
+  background-color: #b69cff;
+  border-radius: 10px;
+  padding: 20px 23px 20px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.diary-item-title {
+  font-weight: 400px;
+  font-size: 25px;
+  color: var(--text_clr);
+  line-height: 34px;
+}
+
+.date_and_category_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diary-note-date {
+  font-size: 14px;
+  font-weight: 600px;
+  color: var(--text_clr);
+  line-height: 24px;
+}
+
+.diary-note-category {
+  font-size: 14px;
+  font-weight: 600px;
+  color: var(--text_clr);
+  line-height: 24px;
+}
+
 .main-image {
   margin-top: 177px;
 }
+
 .main-sub-text {
   font-family: 'Nunito';
   display: flex;
@@ -239,6 +290,8 @@ body {
   padding: 0;
   margin: 6px 0 0 0;
 }
+
+/* footer */
 .footer-content {
 }
 
