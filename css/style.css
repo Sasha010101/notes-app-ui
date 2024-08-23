@@ -167,7 +167,6 @@ body {
   flex-direction: column;
   justify-content: center;
   border-radius: 30px;
-  position: relative;
   padding-inline: 24px;
   position: relative;
 }
@@ -176,9 +175,13 @@ body {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 47px;
+  top: 0px;
   left: 0;
   width: 100%;
+  padding-block: 47px 15px;
+  background-color: #252525;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .header-content {
@@ -228,6 +231,7 @@ body {
 /* main content  */
 .main-content {
   width: 100%;
+  margin-top: 200px;
 }
 
 .wrapper .main-content .diary-list {
@@ -246,6 +250,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .diary-item-title {
@@ -253,6 +258,7 @@ body {
   font-size: 25px;
   color: var(--text_clr);
   line-height: 34px;
+  padding-right: 40px;
 }
 
 .date_and_category_wrapper {

@@ -75,3 +75,27 @@ let diary_list = [
   },
 ];
 let diaryListElement = document.querySelector('#diary_list');
+diary_list.forEach(({ date, time, color, category, title }) => {
+  diaryListElement.insertAdjacentHTML(
+    'beforeend',
+    `<li>
+      <div style="background-color: ${color};"class="diary-item">
+        <h3 class="diary-item-title">${title}</h3>
+        <div class="date_and_category_wrapper">
+          <p class="diary-note-category">${category}</p>
+          <p class="diary-note-date">${date}</p>
+        </div>
+      </div>
+    </li>`
+  );
+});
+
+//  let notes = JSON.parse(localStorage.notes);
+//  notes.forEach(({ title, id, color }) =>
+//    document
+//      .querySelector('body')
+//      .insertAdjacentHTML(
+//        'beforeend',
+//        `<p class="note"  style="background: ${color};" id="${id}">${title}</p>`
+//      )
+//  );
