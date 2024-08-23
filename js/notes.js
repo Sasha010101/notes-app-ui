@@ -74,3 +74,4 @@ let diary_list = [
     body: 'I so exited! I really want to watch this movie.',
   },
 ];
+let diaryListElement = document.querySelector('#diary_list');
