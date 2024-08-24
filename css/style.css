@@ -162,6 +162,7 @@ body {
   max-width: 414px;
   width: 100%;
   min-height: 100vh;
+  height: fit-content;
   background-color: var(--main_clr);
   display: flex;
   flex-direction: column;
@@ -231,7 +232,7 @@ body {
 /* main content  */
 .main-content {
   width: 100%;
-  margin-top: 200px;
+  padding-block: 150px 50px;
 }
 
 .wrapper .main-content .diary-list {
@@ -301,7 +302,7 @@ body {
 .footer-content {
 }
 
-.footer-button {
+.add-new-note-button {
   display: block;
   width: 70px;
   height: 70px;
@@ -310,7 +311,13 @@ body {
   border: none;
   box-shadow: -5px 0px 10px 0px #00000066;
   box-shadow: 0px 5px 10px 0px #00000066;
-  position: absolute;
-  right: 35px;
+  position: fixed;
+  right: 10%;
   bottom: 49px;
+}
+
+@media (min-width: 500px) {
+  .add-new-note-button {
+    right: 20%;
+  }
 }
