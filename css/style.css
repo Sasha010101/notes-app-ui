@@ -10,7 +10,9 @@
   src: url('/fonts/Nunito-Light.ttf'), url('/fonts/Nunito-Regular.ttf'),
     url('/fonts/Nunito-SemiBold.ttf');
 }
-
+.diary-note-category::first-letter {
+  text-transform: uppercase;
+}
 * {
   /* використовується для всіх тегів */
   margin: 0;

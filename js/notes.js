@@ -91,7 +91,9 @@ function generateNoutes() {
       <div id='${id}' style="background-color: ${color};" class= "diary-item">
         <h3 class="diary-item-title">${title}</h3>
         <div class="date_and_category_wrapper">
-          <p class="diary-note-category">${category}</p>
+          <p class="diary-note-category">${
+            category[0].toLocaleUpperCase() + category.slice(1)
+          }</p>
           <p class="diary-note-date">${date}</p>
         </div>
       </div>
